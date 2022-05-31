@@ -2,25 +2,24 @@
 //1. Adding a new item to the list of items: 
 function newItem(){
 
-let li = $(<li></li>);
+let li = $('<li></li>');
 let inputValue = $('#input').val();
-li.appendChild(inputValue)
+li.appendChild(inputValue);
 
 
 if (inputValue === '') {
-    alert('You must write something!')
+    alert('You must write something!');
 } else {
-    $('#list').append(li); //Using the jQuery selector allows me to skip setting a variable and select #list directly
-}
+    $("#list").append(li); 
 
 //2. Crossing out an item from the list of items:
 
 function crossOut() {
-    li.toggleClass('strike');
+    li.toggleClass("strike");
 }
 
-li.on('dbclick', function crossOut(){
-    li.toggleClass('strike');
+li.on("dbclick", function crossOut(){
+    li.toggleClass("strike");
 });
 
 //3(i). Adding the delete button "X": 
