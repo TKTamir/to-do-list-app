@@ -1,5 +1,6 @@
 //javascript
 //1. Adding a new item to the list of items: 
+function newItem(){
 
 let li = $(<li></li>);
 let inputValue = $('#input').val();
@@ -40,7 +41,7 @@ function deleteListItem (){
 $('#list').sortable();
 
 
-
+}
 
 
 
