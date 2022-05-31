@@ -10,7 +10,7 @@ function newItem() {
     if (inputValue === '') {
         alert('You must write something!');
     } else {
-        $("#list").append(li);
+        $("#list").append(li);  //Using the jQuery selector allows me to skip setting a variable and select #list directly
     }
     //2. Crossing out an item from the list of items:
 
