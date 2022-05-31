@@ -1,37 +1,37 @@
-//javascript
+
 //1. Adding a new item to the list of items: 
-function newItem(){
+function newItem() {
 
 let li = $('<li></li>');
 let inputValue = $('#input').val();
-li.appendChild(inputValue);
+li.append(inputValue);
 
 
 if (inputValue === '') {
     alert('You must write something!');
 } else {
     $("#list").append(li); 
-
+}
 //2. Crossing out an item from the list of items:
 
 function crossOut() {
     li.toggleClass("strike");
 }
 
-li.on("dbclick", function crossOut(){
+li.on("dblclick", function crossOut(){
     li.toggleClass("strike");
 });
 
 //3(i). Adding the delete button "X": 
 
-let crossOutButton = $('<crossOutButton></crossOutButton>');
-crossOutButton.append(document.createTextNode('X'));
+let crossOutButton = $("<crossOutButton></crossOutButton>");
+crossOutButton.append(document.createTextNode("X"));
 li.append(crossOutButton);
 
 //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
 
 crossOutButton.on('click', deleteListItem);
-function deleteListItem (){ 
+function deleteListItem() { 
     li.addClass('delete')
 }
 
